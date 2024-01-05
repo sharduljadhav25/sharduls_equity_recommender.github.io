@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About this Project</title>
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+        <style>
+        body {
+            margin: 0;
+            padding: 0; 
+            background-color: rgb(221, 141, 112);
+            overflow-x: hidden;
+        }
+        .topbanner{
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .topbanner img{
+            width: 100%;
+            height: 100%;
+        }
+        .topbanner button{
+            padding-left: 65px;
+            padding-right: 65px;
+            font-size: 25px;
+            background-color: rgb(128, 128, 128);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .topbanner button:hover{
+            font-size: 50px;
+            transition: 0.5s ease;
+        }
+        .topbanner button:not(:hover){
+            transition: 0.5s;
+        }
+        body:hover .topbanner{
+            height: 450px;
+            transition: 0.5s ease;
+        }
+        h1{
+            transform: translateX(-100%);
+            font-size: 100px;
+            color: bisque;
+        }
+        body:hover h1{
+            transform: translateX(250px);
+            transition: 0.5s ease;
+        }
+        body:not(:hover) h1{
+            transition: 0.5s;
+        }
+        body:not(:hover) .topbanner{
+            transition: 0.5s;
+        }
+        .btt{
+            position:fixed;
+            top: 600px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            transform: translateX(-80%);
+            font-size: 15px;
+            background-color: rgb(128, 128, 128);
+            color: whitesmoke;
+            border: none;
+            cursor: pointer;
+            border-radius: 7px;
+            font-family:'IBM Plex Mono', monospace;
+        }
+        .btt:hover{
+            transform: translateX(5px);
+            transition: 0.5s ease;
+            font-size: 20px;
+        }
+        .btt:not(:hover){
+            transition: 0.5s;
+        }
+        h2{
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: center;
+            margin-right: 70px;
+            margin-left: 70px;
+            color: bisque;
+        }
+        h3{
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: center;
+            color: bisque;
+            font-size: 50px;
+        }
+        </style>    
+    </head>
+    <body>
+        <div class="topbanner">
+            <button><pre><a href="index.html">Back to Home</a></pre></button>
+            <img src="images/bababab.gif">
+        </div>
+        <h1><pre>About this Project</pre></h1>
+        <button class="btt" onclick="scrollToTop()">Back to Top</button>
+        <h2>I'm Shardul, an IB student studying in Japan. This website is the final product of my personal project. All in all, my personal project is made up of 2 parts- A python script which screens and recommends Equities, as well as a website (this website) which explain the financial indicators used in the python script for it to reach its conclusion <br><br> I hope you have a fun time using it <br><br> <h3>Thank You</h3></h2>
+    </body>
+</html>

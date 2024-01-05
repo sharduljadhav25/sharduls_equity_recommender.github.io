@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Options Trading</title>
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+      var anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+      anchorLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          var targetId = this.getAttribute('href').substring(1);
+          var targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+            
+            document.addEventListener("DOMContentLoaded", function() {
+            var optionsContainer = document.querySelector(".options");
+
+            window.addEventListener("scroll", function() {
+                var scrollThreshold = 200;
+
+                if (window.scrollY > scrollThreshold) {
+                    optionsContainer.classList.add("slidein");
+                } else {
+                    optionsContainer.classList.remove("slidein");
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        var button1 = document.querySelector(".b1");
+        var button2 = document.querySelector(".b2");
+        var result1 = document.querySelector(".suboptions1");
+        var result2 = document.querySelector(".suboptions2");
+
+        button1.addEventListener("click", function() {
+        result1.classList.toggle("comein1");
+        result2.classList.remove("comein2");
+        });
+
+        button2.addEventListener("click", function() {
+        result2.classList.toggle("comein2");
+        result1.classList.remove("comein1");
+        });
+        });
+        </script>
+        <style>
+        body {
+            margin: 0;
+            padding: 0; 
+            background-color: bisque;
+            overflow-x: hidden;
+        }
+        .topbanner{
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+            width: 100%;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .topbanner img{
+            width: 100%;
+        }
+        .topbanner button{
+            padding-left: 65px;
+            padding-right: 65px;
+            font-size: 25px;
+            background-color: whitesmoke;
+            color: rgb(146, 39, 0);
+            border: none;
+            cursor: pointer;
+        }
+        .topbanner button:hover{
+            font-size: 50px;
+            transition: 0.5s ease;
+        }
+        .topbanner button:not(:hover){
+            transition: 0.5s;
+        }
+        body:hover .topbanner{
+            height: 450px;
+            transition: 0.5s ease;
+        }
+        h1{
+            transform: translateX(-100%);
+            font-size: 100px;
+            color: rgb(146, 39, 0);;
+        }
+        body:hover h1{
+            transform: translateX(250px);
+            transition: 0.5s ease;
+        }
+        body:not(:hover) h1{
+            transition: 0.5s;
+        }
+        body:not(:hover) .topbanner{
+            transition: 0.5s;
+        }
+        .btt{
+            position:fixed;
+            top: 600px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            transform: translateX(-80%);
+            font-size: 15px;
+            background-color: rgb(146, 39, 0);
+            color: whitesmoke;
+            border: none;
+            cursor: pointer;
+            border-radius: 7px;
+            font-family:'IBM Plex Mono', monospace;
+        }
+        .btt:hover{
+            transform: translateX(5px);
+            transition: 0.5s ease;
+            font-size: 20px;
+        }
+        .btt:not(:hover){
+            transition: 0.5s;
+        }
+        .intro {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 1000;
+            font-family: 'IBM Plex Mono', monospace;
+            margin-left: 130px;
+            margin-right: 130px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: row;
+            transform: translateX(-100%);
+            transition: 0.5s ease;
+        }
+
+        .options.slidein {
+            transform: translateX(240px);
+            transition: 0.5s ease;
+        }
+        .options button{
+            background-color: rgb(222, 176, 121);
+            color: brown;
+            padding: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 40px;
+            font-size: 35px;
+            font-family: 'IBM Plex Mono', monospace;
+            border: none;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        .options button:hover{
+            font-size: 50px;
+            transition: 0.5s;
+        }
+        .options button:not(:hover){
+            transition: 0.5s;
+        }
+        .suboptions1{
+            transform: translateX(-100%);
+        }
+        .suboptions2{
+            transform: translateX(-100%);
+        }
+        .suboptions1.comein1{
+            transform: translateX(160px);
+            transition: 0.5s ease;
+        }
+        .suboptions2.comein2{
+            transform: translateX(170px);
+            transition: 0.5s ease;
+        }
+        .suboptions1 button{
+            background-color: brown;
+            border: none;
+            color: bisque;
+            padding: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 55px;
+            font-size: 25px;
+            font-family: 'IBM Plex Mono', monospace;
+            transition: 0.5s ease;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        .suboptions1 button:hover{
+            font-size: 35px;
+            transition: 0.5s ease;
+        }
+        .suboptions2 button:hover{
+            font-size: 35px;
+            transition: 0.5s ease;
+        }
+        .suboptions1 button:not(:hover){
+            transition: 0.5s;
+        }
+        .suboptions1 button:not(:hover){
+            transition: 0.5s;
+        }
+        .suboptions2 button{
+            background-color: brown;
+            border: none;
+            color: bisque;
+            padding: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 0px;
+            font-size: 25px;
+            font-family: 'IBM Plex Mono', monospace;
+            transition: 0.5s ease;
+            cursor: pointer;
+            transform: translateY(-80px);
+            border-radius: 7px;
+        }
+        .subjectmatter h2{
+            font-size: 60px;
+            text-align: center;
+            font-family: 'IBM Plex Mono', monospace;
+            color: rgb(105, 17, 17);
+        }
+        .subjectmatter{
+            margin-top: -75px;
+        }
+        .subjectmatter p{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-size: 20px;
+            font-family:'IBM Plex Mono', monospace;
+            color: rgb(105, 17, 17);
+        }
+        .imgs{
+            display: block;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        </style>    
+    </head>
+    <body>
+        <div class="topbanner">
+            <button><pre><a href="index.html">Back to Home</a></pre></button>
+            <img src="images/actualthang.gif">
+        </div>
+        <h1><pre> Options Trading</pre></h1>
+        <button class="btt" onclick="scrollToTop()">Back to Top</button>
+        <p class="intro">This tab talks about the different ways that options contracts can be bought/sold in collaboration
+            with my python script.
+        </p>
+        <div class="options">
+            <button class="b1">Bullish Strategies</button>
+            <button class="b2">Bearish Strategies</button>
+        </div>
+        <div class="suboptions1">
+            <button><a href="#1">Naked Call</a></button>
+            <button><a href="#2">Bull Call Spread</a></button>
+            <button><a href="#3">Bull Put Spread</a></button>
+            <button><a href="#4">Call Ratio</a></button>
+        </div>
+        <div class="suboptions2">
+            <button><a href="#5">Naked Put</a></button>
+            <button><a href="#6">Bear Call Spread</a></button>
+            <button><a href="#7">Bear Put Spread</a></button>
+            <button><a href="#8">Put Ratio</a></button>
+        </div>
+        <div class="subjectmatter">
+            <h2 id="1">Naked Call</h2>
+            <p>A naked call options is a purchasable security which grants you the right to buy a particular equity/index from the party that sold you the option. <br><br> The price of an options contract is known as the options premium. It is basically the amount you are paying the options seller for granting you the right to purchase the shares from him. <br><br> There are 3 main features of an options contract- <br><br>The options premium, The options expiry, and the options strike price. Your right to execute the options contract and buy the underlying security can be done at any time before the options expiry. The strike price is the price at which you'll be buying the shares once you've decided to execute. The strike price stays constant and is predetermined while purchasing the contract. The trader can purchase contracts at several different prices. <br><br>
+            The buyer of a naked call makes a profit when he executes the contract at a price where the spot price is higher than the Strike price. This means that the trader is buying the underlying security at a price which is discounted as compared to the actual market price. Therefore, a trader who has bought a naked call, makes a profit upon bullishness in the underlying security. If the opposite happens, and the price of the security goes down, the trader can chose to NOT EXECUTE the contract, and let it expire worthelessly. In that case the loss of the trader will be limited to the premium paid by him.</p>
+            <img src="Options/image-removebg-preview (2).png" class="imgs">
+            <h2 id="2">Bull Call Spread</h2>
+            <p>A bull call spread is a bullish strategy that involves buying and selling an equal number of call options wherein the bought options are at a lower strike price than the ones that are sold. This strategy hedges against downside risk as if the market heads downwards, the short option will limit the losses of the trader. The maximum loss will be the long options premium minus the short option premium. <br><br>However, once the trade has been initiated, the trader will be in a net debit at first, since the long option costed him more than what the short option gave him. Because of this, the price of the underlying security has to rise by the net debit in order for the trader to make a profit</p>
+            <img src="Options/image-removebg-preview (3).png" class="imgs">
+            <h2 id="3">Bull Put Spread</h2>
+            <p>A bull put spread involves selling and buying an equal number of put options contracts. To know what a put contract is, have a look at the section on naked puts. <br><br> (Back to the topic) The short put is sold at a strike price higher than the long put. This puts the trader in a net credit after initiating the trade. The maximum profit is limited to this net credit, and is ensured as long as the underlying asset stays above the short put's strike price. The maximum loss is seen if the whole premium on the short put is lost to bearishness, and then the trader fails to breakeven on the long put.</p>
+            <img src="Options/image-removebg-preview (4).png" class="imgs">
+            <h2 id="4">Call Ratio</h2>
+            <p>This is essentially a Bull call spread wherein the number of short options is more than the number of long options. This is done to stay in a net credit at the time of initiating the trade. Some popular ratios are 2:1 or 3:1 wherein the number of short options is 2 or 3 times more than the number of long options.</p>
+            <img src="Options/image-removebg-preview (5).png" class="imgs">
+            <h2 id="5">Naked Put</h2>
+            <p>A naked put option is the last and second type of options contract. The intention of the trader while buying this option is for the market to go downwards. <br><br> A put option has all the features of a call options but instead of buying the security at the strike price, you sell the security. Therefore if the price of the underlying goes below the strike, you'll be selling at an exaggerated price which is your profit.</p>
+            <img src="Options/image-removebg-preview (6).png" class="imgs">
+            <h2 id="6">Bear Call Spread</h2>
+            <p>This strategy invloves buying and selling an equal number of call option contracts. The short options are purchased at a lower strike price than the long options leading to a net credit which is the maximum profit. The maximum loss is experienced when the short option loses its premium and the long option fails to breakeven.</p>
+            <img src="Options/image-removebg-preview (7).png" class="imgs">
+            <h2 id="7">Bear Put Spread</h2>
+            <p>This strategy involves buying and selling an equal number of put options.<br><br>The long options are pruchased at a strike price that is above that of the short options. This puts the trader in a net debit. <br><br> The maximum profit is unlimited and is broken into once the long option gains more than the net debit at the time of executing the trade. The maximum loss is limited to the net debit.</p>
+            <img src="Options/image-removebg-preview (8).png" class="imgs">
+            <h2 id="8">Put Ratio</h2>
+            <p>This strategy is the same thing as a Bear Put Spread, but the short options are sold in a higher quantity than the long options. This puts the trader in a net credit, and gives him a bearish bias.</p>
+            <img src="Options/image-removebg-preview (9).png" class="imgs">
+        </div>
+    </body>
+</html>
